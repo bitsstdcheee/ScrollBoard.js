@@ -487,7 +487,8 @@ Board.prototype.showInitBoard = function() {
             var tProblem = team.submitProblemList[this.problemList[key]];
             if (tProblem) {
                 if (tProblem.isUnkonwn)
-                    problemHTML += "<span class=\"label label-warning\">" + tProblem.submitCount + "</span></td>";
+                    // problemHTML += "<span class=\"label label-warning\">" + tProblem.submitCount + "</span></td>";
+                    problemHTML += "<span class=\"label label-warning\">" + "?" + "</span></td>";
                 else {
                     if (tProblem.isAccepted) {
                         problemHTML += "<span class=\"label label-success\">" + tProblem.submitCount + "/" + parseInt(tProblem.acceptedTime / 1000.0 / 60.0) + "</span></td>";
